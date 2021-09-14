@@ -6,21 +6,18 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:30:29 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/14 14:20:56 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/14 16:22:45 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_catching_errors(int argc, char **argv) //проверить почему ломает
+int	ft_checking_if_digits(char **argv)
 {
-	int i;
-	int j;
+	int	j;
+	int	i;
 
-	if (argc == 1)
-		return (1);
 	j = 1;
-	/* checking if all are digits */
 	while (argv[j])
 	{
 		i = 0;
@@ -32,6 +29,14 @@ int ft_catching_errors(int argc, char **argv) //проверить почему 
 		}
 		j++;
 	}
+	return (0);
+}
+
+int	ft_checking_if_doubles(char **argv)
+{
+	int	j;
+	int	i;
+
 	j = 1;
 	while (argv[j]) //checking doubles
 	{
@@ -44,11 +49,30 @@ int ft_catching_errors(int argc, char **argv) //проверить почему 
 		}
 		j++;
 	}
+	return (0);
+}
+
+int	ft_checking_if_sorted(char **argv)
+{
+	int	j;
 	j = 1;
 	while((argv[j + 1] != '\0') && (ft_atoi(argv[j]) < ft_atoi(argv[j + 1])))
 		j++;
 	if (argv[j + 1] == '\0')
 		return (1);
+	return (0);
+}
+
+int	ft_catching_errors(int argc, char **argv)
+{
+	int ret_val;
 	
+	if (argc == 1)
+		return (1);
+	ret_val = ft_checking_if_digits(argv);
+	ret_val += ft_checking_if_doubles(argv);
+	ret_val += ft_checking_if_sorted(argv);
+	if (ret_val > 0)
+		return (1);
 	return (0);
 }

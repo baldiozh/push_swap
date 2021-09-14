@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/14 14:01:16 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/14 15:22:30 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int main(int argc, char **argv)
 	swap(&datum_a);
 	while(datum_a)
 	{
-		printf("%d-", datum_a->value); //write 
+		printf("%d-", datum_a->value); //write
 		datum_a = datum_a->next;
 	}
 
