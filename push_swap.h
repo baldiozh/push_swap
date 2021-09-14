@@ -19,13 +19,17 @@ void	ft_putstr_fd(char *s, int fd);
 int		ft_atoi(const char *str);
 int		ft_isalpha(int ch);
 int		ft_isdigit(int ch);
+
 int		ft_catching_errors(int argc, char **argv);
-void	add_elem_start(int value, t_elem *head);
-void	add_elem_end(int value, t_elem *head);
-t_elem	*create(int value);
-void	swap(t_elem **head);
 int		ft_checking_if_doubles(char **argv);
 int		ft_checking_if_digits(char **argv);
 int		ft_checking_if_sorted(char **argv);
+
+t_elem	*create(int value);
+void	add_elem_start(int value, t_elem *head);
+void	add_elem_end(int value, t_elem *head);
+
+void	swap(t_elem **head);
+
 
 #endif
