@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:30:29 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/14 13:47:22 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/14 13:56:31 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,18 @@ int ft_catching_errors(int argc, char **argv) //проверить почему 
 	if (argc == 1)
 		return (1);
 	j = 1;
+	while (argv[j])
+	{
+		i = 0;
+		while (argv[j][i])
+		{
+			if (ft_isdigit(argv[j][i]) == 0)
+				return (1);
+			i++;
+		}
+		j++;
+	}
+	j = 1;
 	while (argv[j]) //checking doubles
 	{
 		i = 1;
@@ -31,7 +43,5 @@ int ft_catching_errors(int argc, char **argv) //проверить почему 
 		}
 		j++;
 	}
-	
-	
 	return (0);
 }
