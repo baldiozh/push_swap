@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:30:29 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/14 13:56:31 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/14 14:20:56 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int ft_catching_errors(int argc, char **argv) //проверить почему 
 	if (argc == 1)
 		return (1);
 	j = 1;
+	/* checking if all are digits */
 	while (argv[j])
 	{
 		i = 0;
@@ -43,5 +44,11 @@ int ft_catching_errors(int argc, char **argv) //проверить почему 
 		}
 		j++;
 	}
+	j = 1;
+	while((argv[j + 1] != '\0') && (ft_atoi(argv[j]) < ft_atoi(argv[j + 1])))
+		j++;
+	if (argv[j + 1] == '\0')
+		return (1);
+	
 	return (0);
 }
