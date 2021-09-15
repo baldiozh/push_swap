@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rules_sort.c                                    :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:51 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/15 15:45:45 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/15 19:14:52 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	swap(t_elem **head)
-{
-	t_elem *first;
-	t_elem *second;
-	
-	first = *head;
-	second = (*head)->next;
-	first->next = (*head)->next->next;
-	second->next = first;
-	*head = second;
-}
 
 void	push(t_elem **src, t_elem **dest)
 {
@@ -34,4 +22,16 @@ void	push(t_elem **src, t_elem **dest)
 	*src = (*src)->next;
 	tmp->next = *dest;
 	*dest = tmp;
+}
+
+void	pa(t_elem **datum_a, t_elem **datum_b)
+{
+	push(datum_b, datum_a);
+	write(1, "pa\n", 3);
+}
+
+void	pb(t_elem **datum_a, t_elem **datum_b)
+{
+	push(datum_a, datum_b);
+	write(1, "pb\n", 3);
 }

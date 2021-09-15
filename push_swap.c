@@ -6,11 +6,45 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/15 15:50:18 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/15 19:52:47 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	print_result(t_elem *datum_a, t_elem *datum_b)
+{
+	write(1, "\n", 1);
+	ft_putstr_fd("A ", 1);
+	while(datum_a)
+	{
+		ft_putnbr(datum_a->value);
+		write(1, "-", 1);
+		datum_a = datum_a->next;
+	}
+	write(1, "\n", 1);
+	ft_putstr_fd("B ", 1);
+	while(datum_b)
+	{
+		ft_putnbr(datum_b->value);
+		write(1, "-", 1);
+		datum_b = datum_b->next;
+	}
+}
+
+void	ft_filling_stack(char **argv, t_elem **head)
+{
+	int		j;
+
+	j = 1;	
+	*head = create(ft_atoi(argv[j++]));
+	while(argv[j]) //j = 1
+	{
+		add_elem_end(ft_atoi(argv[j]), *head);
+		j++;
+	} 
+	
+}
 
 int main(int argc, char **argv)
 {
@@ -22,7 +56,6 @@ int main(int argc, char **argv)
 
 	i = 0;
 	j = 1;
-	datum_a = NULL;
 	if (ft_catching_errors(argc, argv) == 1)
 		exit(EXIT_FAILURE);
 	if (argc == 1)
@@ -44,32 +77,14 @@ int main(int argc, char **argv)
 	// }
 	if (argc > 2)
 	{
-		datum_a = create(ft_atoi(argv[j++]));
+		ft_filling_stack(argv, &datum_a);
 		datum_b = create(7);
-		
-		while(argv[j]) //j = 1
-		{
-			add_elem_end(ft_atoi(argv[j]), datum_a);
-			j++;
-		}
 		add_elem_end(6, datum_b);
 		add_elem_end(9, datum_b);
 	}
-	//swap(&datum_a);
-	push(&datum_a, &datum_b);
-	while(datum_a)
-	{
-		ft_putnbr(datum_a->value);
-		write(1, "-", 1);
-		datum_a = datum_a->next;
-	}
+	print_result(datum_a, datum_b);
 	write(1, "\n", 1);
-	while(datum_b)
-	{
-		ft_putnbr(datum_b->value);
-		write(1, "-", 1);
-		datum_b = datum_b->next;
-	}
-
+	rr(&datum_a, &datum_b);
+	print_result(datum_a, datum_b);
 	return (0);
 }

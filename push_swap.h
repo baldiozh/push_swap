@@ -31,7 +31,17 @@ void	add_elem_start(int value, t_elem *head);
 void	add_elem_end(int value, t_elem *head);
 
 void	swap(t_elem **head);
-void	push(t_elem **src, t_elem **dest);
+void	sa(t_elem **datum_a);
+void	sb(t_elem **datum_b);
+void	ss(t_elem **datum_a, t_elem **datum_b);
 
+void	push(t_elem **src, t_elem **dest);
+void	pa(t_elem **datum_a, t_elem **datum_b);
+void	pb(t_elem **datum_a, t_elem **datum_b);
+
+void	rotate(t_elem **head);
+void	ra(t_elem **datum_a);
+void	rb(t_elem **datum_b);
+void	rr(t_elem **datum_a, t_elem **datum_b);
 
 #endif
