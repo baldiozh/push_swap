@@ -44,4 +44,9 @@ void	ra(t_elem **datum_a);
 void	rb(t_elem **datum_b);
 void	rr(t_elem **datum_a, t_elem **datum_b);
 
+void	reverse_rotate(t_elem **head);
+void	rra(t_elem **datum_a);
+void	rrb(t_elem **datum_b);
+void	rrr(t_elem **datum_a, t_elem **datum_b);
+
 #endif

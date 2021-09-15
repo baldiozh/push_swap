@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 16:58:16 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/15 19:51:45 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/15 19:56:26 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	rotate(t_elem **head)
 {
-	t_elem *tmp;
-	t_elem *tmp_head;
+	t_elem	*tmp;
+	t_elem	*tmp_head;
+
 	tmp = *head;
 	*head = (*head)->next;
 	tmp_head = *head;
