@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/15 15:10:38 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/15 15:50:18 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(int argc, char **argv)
 {
 	t_elem *datum_a;
-	t_elem *datum_b;		//same as t_elem *head = NULL; 
+	t_elem *datum_b;
 	char **arr = NULL;
 	int i;
 	int j;
@@ -45,20 +45,30 @@ int main(int argc, char **argv)
 	if (argc > 2)
 	{
 		datum_a = create(ft_atoi(argv[j++]));
+		datum_b = create(7);
+		
 		while(argv[j]) //j = 1
 		{
 			add_elem_end(ft_atoi(argv[j]), datum_a);
 			j++;
 		}
+		add_elem_end(6, datum_b);
+		add_elem_end(9, datum_b);
 	}
-	
 	//swap(&datum_a);
-	
+	push(&datum_a, &datum_b);
 	while(datum_a)
 	{
 		ft_putnbr(datum_a->value);
 		write(1, "-", 1);
 		datum_a = datum_a->next;
+	}
+	write(1, "\n", 1);
+	while(datum_b)
+	{
+		ft_putnbr(datum_b->value);
+		write(1, "-", 1);
+		datum_b = datum_b->next;
 	}
 
 	return (0);

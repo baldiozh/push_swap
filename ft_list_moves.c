@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:30:19 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/13 18:57:13 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/15 15:16:39 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ t_elem *create(int value)
 /* добавление узла в начало списка */
 void add_elem_start(int value, t_elem *head)
 {
+	//refact
 	t_elem *tmp = (t_elem *)malloc(sizeof(t_elem));
 	tmp->value = value;
 	tmp->next = head;
@@ -31,7 +32,9 @@ void add_elem_start(int value, t_elem *head)
 
 void add_elem_end(int value, t_elem *head)
 {
-	t_elem *tmp = (t_elem *)malloc(sizeof(t_elem));
+	t_elem *tmp;
+	
+	tmp = (t_elem *)malloc(sizeof(t_elem));
 	tmp->value = value;
 	tmp->next = NULL;
 	t_elem *p = head;

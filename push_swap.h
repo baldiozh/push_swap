@@ -31,6 +31,7 @@ void	add_elem_start(int value, t_elem *head);
 void	add_elem_end(int value, t_elem *head);
 
 void	swap(t_elem **head);
+void	push(t_elem **src, t_elem **dest);
 
 
 #endif
