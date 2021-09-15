@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/14 15:22:30 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/15 15:10:38 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 int main(int argc, char **argv)
 {
-	t_elem *datum_a;		//same as t_elem *head = NULL; 
+	t_elem *datum_a;
+	t_elem *datum_b;		//same as t_elem *head = NULL; 
 	char **arr = NULL;
 	int i;
 	int j;
-	// int value;
 
 	i = 0;
 	j = 1;
-//	write(1, "1", 1);
 	datum_a = NULL;
 	if (ft_catching_errors(argc, argv) == 1)
 		exit(EXIT_FAILURE);
@@ -52,14 +51,15 @@ int main(int argc, char **argv)
 			j++;
 		}
 	}
-	//write(1, "2", 1);
-	swap(&datum_a);
+	
+	//swap(&datum_a);
+	
 	while(datum_a)
 	{
-		printf("%d-", datum_a->value); //write
+		ft_putnbr(datum_a->value);
+		write(1, "-", 1);
 		datum_a = datum_a->next;
 	}
 
-	
 	return (0);
 }

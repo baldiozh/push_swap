@@ -19,6 +19,7 @@ void	ft_putstr_fd(char *s, int fd);
 int		ft_atoi(const char *str);
 int		ft_isalpha(int ch);
 int		ft_isdigit(int ch);
+void	ft_putnbr(int n);
 
 int		ft_catching_errors(int argc, char **argv);
 int		ft_checking_if_doubles(char **argv);
