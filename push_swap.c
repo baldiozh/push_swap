@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/16 16:20:41 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/16 16:36:16 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,7 @@ int main(int argc, char **argv)
 	}
 	// print_result(datum_a, datum_b);
 	write(1, "\n", 1);
-	int size;
-	size = ft_count_listsize(&datum_a);
+	int size = ft_count_listsize(&datum_a);
 	ft_putnbr(size);
 	print_result(datum_a, datum_b);
 	return (0);
