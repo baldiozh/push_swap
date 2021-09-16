@@ -29,8 +29,9 @@ int		ft_checking_if_sorted(char **argv);
 int		ft_count_listsize(t_elem *head);
 void	remove_last_elem(t_elem **head);
 
+
 t_elem	*create(int value);
-void	add_elem_start(int value, t_elem *head);
+t_elem	*add_elem_start(int value, t_elem *head);
 void	add_elem_end(int value, t_elem *head);
 
 void	swap(t_elem **head);

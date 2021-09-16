@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 14:51:54 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/16 17:41:25 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/16 17:51:28 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	remove_last_elem(t_elem **head)
 	
 	tmp_head = *head;
 	size = ft_count_listsize(*head);
-	ft_putnbr(size);
 	while (size > 2)
 	{
 		tmp_head = tmp_head->next;
