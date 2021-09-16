@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/16 17:46:02 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/16 18:17:14 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int main(int argc, char **argv)
 	}
 	print_result(datum_a, datum_b);
 	write(1, "\n", 1);
-	reverse_rotate(&datum_a);
+	rrr(&datum_a, &datum_b);
 	print_result(datum_a, datum_b);
 	return (0);
 }

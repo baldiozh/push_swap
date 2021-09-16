@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:30:19 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/16 18:07:53 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/16 18:09:26 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ t_elem *create(int value)
 {
 	t_elem *tmp;
 	
-	tmp = (t_elem *)malloc(sizeof(t_elem));	/* выделение памяти под корень списка */
-	tmp->value = value; 								/* присваивание значения узлу */
-	tmp->next = NULL;									/* присваивание указателю на след элем. знач. NULL */
+	tmp = (t_elem *)malloc(sizeof(t_elem));			/* выделение памяти под корень списка */
+	tmp->value = value; 							/* присваивание значения узлу */
+	tmp->next = NULL;								/* присваивание указателю на след элем. знач. NULL */
 	return (tmp); 
 }
 

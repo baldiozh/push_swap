@@ -1,5 +1,5 @@
 NAME	= push_swap.a
-SRC		= ft_atoi.c ft_isalpha.c ft_putstr_fd.c ft_split.c push_swap.c ft_atoi.c
+SRC		= ft_atoi.c ft_isalpha.c ft_putstr_fd.c ft_split.c push_swap.c ft_atoi.c 
 OBJ		= ${SRC:.c=.o}
 FLAGS	= -Wall -Werror -Wextra
 HEADER	= push_swap.h
