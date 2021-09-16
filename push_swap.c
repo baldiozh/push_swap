@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/16 18:17:14 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/16 18:47:20 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,10 @@ int main(int argc, char **argv)
 	i = 0;
 	j = 1;
 	if (ft_catching_errors(argc, argv) == 1)
+	{
+		ft_putstr_fd("Error!\n", 1);
 		exit(EXIT_FAILURE);
+	}
 	if (argc == 1)
 		exit(1);
 	// if (argc == 2)
@@ -83,7 +86,6 @@ int main(int argc, char **argv)
 	}
 	print_result(datum_a, datum_b);
 	write(1, "\n", 1);
-	rrr(&datum_a, &datum_b);
 	print_result(datum_a, datum_b);
 	return (0);
 }
