@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/15 19:52:47 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/16 16:20:41 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_filling_stack(char **argv, t_elem **head)
 
 	j = 1;	
 	*head = create(ft_atoi(argv[j++]));
-	while(argv[j]) //j = 1
+	while(argv[j])
 	{
 		add_elem_end(ft_atoi(argv[j]), *head);
 		j++;
@@ -82,9 +82,11 @@ int main(int argc, char **argv)
 		add_elem_end(6, datum_b);
 		add_elem_end(9, datum_b);
 	}
-	print_result(datum_a, datum_b);
+	// print_result(datum_a, datum_b);
 	write(1, "\n", 1);
-	rr(&datum_a, &datum_b);
+	int size;
+	size = ft_count_listsize(&datum_a);
+	ft_putnbr(size);
 	print_result(datum_a, datum_b);
 	return (0);
 }
