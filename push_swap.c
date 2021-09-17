@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/17 18:03:21 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/17 18:34:37 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,8 @@ int main(int argc, char **argv)
 		ft_filling_stack(argv, &datum_a);
 	}
 	print_result(datum_a, datum_b);
-
+	write(1, "\n\n", 2);
+	sorting_three_elems(&datum_a);
 	print_result(datum_a, datum_b);
 	return (0);
 }

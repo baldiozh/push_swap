@@ -2,32 +2,32 @@
 
 void	sorting_three_elems(t_elem **head)
 {
-	t_elem	*top;
-	t_elem	*mid;
-	t_elem	*bot;
+	int	top;
+	int	mid;
+	int	bot;
 
-	top = (*head);
-	mid = (*head)->next;
-	bot = (*head)->next->next;
+	top = (*head)->value;
+	mid = (*head)->next->value;
+	bot = (*head)->next->next->value;
 	/* case 2-1-3 */
-	if(top->value > mid->value && bot->value > mid->value && bot->value > top->value)
+	if(top > mid && bot > mid && bot > top)
 		sa(head);
 	/* case 3-2-1 */
-	if(top->value > mid->value && top->value > bot->value && mid->value > bot->value)
+	else if(top > mid && top > bot && mid > bot)
 	{
 		sa(head);
 		rra(head);
 	}
 	/* case 3-1-2 */
-	if(top->value > mid->value && bot->value > mid->value && top->value > bot->value)
+	else if(top > mid && bot > mid && top > bot)
 		ra(head);
 	/* case 1-3-2 */
-	if(top->value < mid->value && top->value < bot->value && mid->value > bot->value)
+	else if(top < mid && top < bot && mid > bot)
 	{
 		sa(head);
 		ra(head);
 	}
 	/* case 2-3-1 */
-	if(top->value < mid->value && top->value > bot->value && mid->value > bot->value)
+	else if(top < mid && top > bot && mid > bot)
 		rra(head);
 }
