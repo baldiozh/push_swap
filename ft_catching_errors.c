@@ -6,9 +6,10 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:30:29 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/14 16:22:45 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/16 18:55:19 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "push_swap.h"
 
@@ -38,7 +39,7 @@ int	ft_checking_if_doubles(char **argv)
 	int	i;
 
 	j = 1;
-	while (argv[j]) //checking doubles
+	while (argv[j])
 	{
 		i = 1;
 		while(argv[j + i])

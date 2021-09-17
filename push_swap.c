@@ -6,13 +6,13 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/16 18:47:20 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/17 18:03:21 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_result(t_elem *datum_a, t_elem *datum_b)
+void	print_result(t_elem *datum_a, t_elem *datum_b)  //don't need when proj is finished
 {
 	write(1, "\n", 1);
 	ft_putstr_fd("A ", 1);
@@ -55,13 +55,16 @@ int main(int argc, char **argv)
 
 	i = 0;
 	j = 1;
-	if (ft_catching_errors(argc, argv) == 1)
+	if (argc == 1)
 	{
-		ft_putstr_fd("Error!\n", 1);
+		ft_putstr_fd("Error: too few arguments!\n", 1);
 		exit(EXIT_FAILURE);
 	}
-	if (argc == 1)
-		exit(1);
+	if (ft_catching_errors(argc, argv) == 1)
+	{
+		ft_putstr_fd("Error: alphas, doubles or sorted!\n", 1);
+		exit(EXIT_FAILURE);
+	}
 	// if (argc == 2)
 	// {
 	// 	while (j < argc)
@@ -80,12 +83,9 @@ int main(int argc, char **argv)
 	if (argc > 2)
 	{
 		ft_filling_stack(argv, &datum_a);
-		datum_b = create(7);
-		add_elem_end(6, datum_b);
-		add_elem_end(9, datum_b);
 	}
 	print_result(datum_a, datum_b);
-	write(1, "\n", 1);
+
 	print_result(datum_a, datum_b);
 	return (0);
 }

@@ -11,6 +11,7 @@
 typedef struct s_elem
 {
 	int	value;
+	int	index;
 	struct s_elem *next;
 }	t_elem;
 
@@ -28,6 +29,9 @@ int		ft_checking_if_sorted(char **argv);
 
 int		ft_count_listsize(t_elem *head);
 void	remove_last_elem(t_elem **head);
+
+
+void	sorting_three_elems(t_elem **head);
 
 
 t_elem	*create(int value);
