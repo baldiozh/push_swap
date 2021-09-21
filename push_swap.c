@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/21 17:26:22 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/21 19:26:45 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,6 @@ int main(int argc, char **argv)
 	}
 	print_result(datum_a, datum_b);
 	write(1, "\n\n", 2);
-	// ft_finding_min(&datum_a);
-	// ft_finding_max(&datum_a);
 	ft_sorting_five_elems(&datum_a, &datum_b);
 	print_result(datum_a, datum_b);
 	return (0);
