@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:30:29 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/16 18:55:19 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/21 17:04:15 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_checking_if_digits(char **argv)
 		i = 0;
 		while (argv[j][i])
 		{
-			if (ft_isdigit(argv[j][i]) == 0)
+			if (ft_isdigit(argv[j][i]) == 0 && argv[j][i] != 45)
 				return (1);
 			i++;
 		}

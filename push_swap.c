@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/17 18:34:37 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/21 17:26:22 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,28 +65,15 @@ int main(int argc, char **argv)
 		ft_putstr_fd("Error: alphas, doubles or sorted!\n", 1);
 		exit(EXIT_FAILURE);
 	}
-	// if (argc == 2)
-	// {
-	// 	while (j < argc)
-	// 	{
-	// 		arr = ft_split(argv[j], ' ');
-	// 		while (arr[i])
-	// 		{
-	// 			value = ft_atoi(arr[i]);
-	// 			printf("value = %d\n", value);
-	// 			head = create(value);	//добавить новый узел
-	// 			i++;
-	// 	}
-	// 	j++;
-	// 	}	
-	// }
 	if (argc > 2)
 	{
 		ft_filling_stack(argv, &datum_a);
 	}
 	print_result(datum_a, datum_b);
 	write(1, "\n\n", 2);
-	sorting_three_elems(&datum_a);
+	// ft_finding_min(&datum_a);
+	// ft_finding_max(&datum_a);
+	ft_sorting_five_elems(&datum_a, &datum_b);
 	print_result(datum_a, datum_b);
 	return (0);
 }

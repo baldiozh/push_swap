@@ -31,7 +31,10 @@ int		ft_count_listsize(t_elem *head);
 void	remove_last_elem(t_elem **head);
 
 
-void	sorting_three_elems(t_elem **head);
+void	ft_sorting_three_elems(t_elem **head);
+void	ft_sorting_five_elems(t_elem **datum_a, t_elem **datum_b);
+int		ft_finding_min(t_elem **head);
+int		ft_finding_max(t_elem **head);
 
 
 t_elem	*create(int value);
