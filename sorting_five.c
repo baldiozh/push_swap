@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-static int	search_place(t_elem **head, int min)
+int	ft_search_place(t_elem **head, int min)
 {
 	t_elem	*tmp_head;
 	int		i;
