@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int	ft_search_place(t_elem **head, int min)
+int	ft_search_elems_place(t_elem **head, int min)
 {
 	t_elem	*tmp_head;
 	int		i;
@@ -45,14 +45,19 @@ void	ft_sorting_five_elems(t_elem **datum_a, t_elem **datum_b)
 	int		min;
 	
 	min = ft_finding_min(datum_a);
-	i = search_place(datum_a, min);
+	i = ft_search_elems_place(datum_a, min);
 	ft_move_baby(datum_a, i);
 	pb(datum_a, datum_b);
 	min = ft_finding_min(datum_a);
-	i = search_place(datum_a, min);
+	i = ft_search_elems_place(datum_a, min);
 	ft_move_baby(datum_a, i);
 	pb(datum_a, datum_b);
 	ft_sorting_three_elems(datum_a);
 	pa(datum_a, datum_b);
 	pa(datum_a, datum_b);
+}
+
+void	ft_sorting_ten_elems(t_elem **datum_a, t_elem **datum_b)
+{
+	
 }
