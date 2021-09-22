@@ -56,8 +56,3 @@ void	ft_sorting_five_elems(t_elem **datum_a, t_elem **datum_b)
 	pa(datum_a, datum_b);
 	pa(datum_a, datum_b);
 }
-
-void	ft_sorting_ten_elems(t_elem **datum_a, t_elem **datum_b)
-{
-	
-}
