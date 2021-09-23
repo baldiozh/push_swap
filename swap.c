@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 16:58:04 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/15 17:42:11 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/23 14:44:48 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,6 @@ void	sa(t_elem **datum_a)
 
 void	sb(t_elem **datum_b)
 {
-	// int	size;
-	// while ((*datum_b)->next)
-	// 	size++;
-	// if (size < 2)
-	// 	return ;
-	// else
 	swap(datum_b);
 	write(1, "sb\n", 3);
 }

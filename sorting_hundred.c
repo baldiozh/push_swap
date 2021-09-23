@@ -12,7 +12,7 @@ static void	ft_move_baby(t_elem **head, int i, int j)
 	}
 	else
 	{
-		printf("else i = %d\n", i);
+		// printf("else i = %d\n", i);
 		while (i < (100 - j))
 		{
 			rra(head);
@@ -31,9 +31,9 @@ void	ft_sorting_hundred(t_elem **datum_a, t_elem **datum_b)
 	while(j < 100)
 	{
 		min = ft_finding_min(datum_a);
-		printf("min = %d\n", min);
+		// printf("min = %d\n", min);
 		i = ft_search_elems_place(datum_a, min);
-		printf("i = %d\n", i);
+		// printf("i = %d\n", i);
 		ft_move_baby(datum_a, i, j);
 		pb(datum_a, datum_b);
 		j++;
@@ -43,6 +43,4 @@ void	ft_sorting_hundred(t_elem **datum_a, t_elem **datum_b)
 		pa(datum_a, datum_b);
 		j--;
 	}
-
-	
 }
