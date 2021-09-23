@@ -33,37 +33,44 @@ static int	ft_find_min_max(int *arr, int mode)
 
 static void	ft_swap(int	a, int b)
 {
-	int *tmp;
+	int tmp;
 
 	tmp = a;
 	a = b;
 	b = tmp;
-	free(tmp);
 }
 
 void	ft_prev_sort(int argc, char **argv)
 {
 	int		i;
 	int		*arr;
-	int		min;
-	int		max;
+	int		j;
+	// int		min;
+	// int		max;
 
 	i = 0;
-	while(i < argc)
+	j = 1;
+	while(i < argc+1)
 	{
-		arr[i] = argv[1 + i];
+		arr[i] = ft_atoi(argv[j]);
 		i++;
+		j++;
 	}
 	arr[i] = '\0';
-	min = ft_find_min_max(arr, -1);
-	max = ft_find_min_max(arr, 1);
+	// min = ft_find_min_max(arr, -1);
+	// max = ft_find_min_max(arr, 1);
 	i = 0;
 	while(i < argc)
 	{
-		if (arr[i] > min)
-
+		if (arr[i] > arr[i + 1])
+			ft_swap(arr[i], arr[i + 1]);
+		i++;
+	}
+	i = 0;
+	while(arr[i])
+	{
+		printf("%d\n", arr[i]);
+		i++;
 	}
 
-
-	
 }

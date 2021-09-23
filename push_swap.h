@@ -72,4 +72,6 @@ void	ft_sorting_three_elems(t_elem **head);
 void	ft_sorting_five_elems(t_elem **datum_a, t_elem **datum_b);
 void	ft_sorting_hundred(t_elem **datum_a, t_elem **datum_b);
 
+void	ft_prev_sort(int argc, char **argv);
+
 #endif
