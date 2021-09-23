@@ -17,7 +17,7 @@ static int	ft_find_min_max(int *arr, int mode)
 		}
 		return (res);
 	}
-	if(mode == 1)
+	else
 	{
 		res = INT_MAX;
 		while (arr[i])
@@ -43,28 +43,37 @@ static void	ft_swap(int	a, int b)
 void	ft_prev_sort(int argc, char **argv)
 {
 	int		i;
-	int		*arr;
+	int		arr[500];
 	int		j;
+	int		tmp;
 	// int		min;
 	// int		max;
 
 	i = 0;
 	j = 1;
-	while(i < argc+1)
+	while(j < argc)
 	{
 		arr[i] = ft_atoi(argv[j]);
 		i++;
 		j++;
 	}
-	arr[i] = '\0';
+	printf("i = %d\n", i);
+	arr[++i] = '\0';
+	printf("i = %d\n", i);
+	// printf("%d\n", ft_atoi(argv[++j]));
 	// min = ft_find_min_max(arr, -1);
 	// max = ft_find_min_max(arr, 1);
-	i = 0;
-	while(i < argc)
+	i--;
+	printf("i = %d\n", i);
+	while(i > 0)
 	{
-		if (arr[i] > arr[i + 1])
-			ft_swap(arr[i], arr[i + 1]);
-		i++;
+		if (arr[i] < arr[i - 1])
+		{
+			tmp = arr[i];
+			arr[i] = arr[i - 1];
+			arr[i - 1] = tmp;
+		}
+		i--;
 	}
 	i = 0;
 	while(arr[i])
