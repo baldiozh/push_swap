@@ -68,10 +68,12 @@ int		ft_finding_max(t_elem **head);
 int		ft_search_elems_place(t_elem **head, int min);
 
 /* sorting */
+void	ft_prev_sort(int argc, char **argv);
+
 void	ft_sorting_three_elems(t_elem **head);
 void	ft_sorting_five_elems(t_elem **datum_a, t_elem **datum_b);
 void	ft_sorting_hundred(t_elem **datum_a, t_elem **datum_b);
 
-void	ft_prev_sort(int argc, char **argv);
+int	ft_finding_min_max(int *arr, int mode); /////
 
 #endif
