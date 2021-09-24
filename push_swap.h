@@ -11,7 +11,7 @@
 typedef struct s_elem
 {
 	int	value;
-	int	index;
+	int	order;
 	struct s_elem *next;
 }	t_elem;
 
@@ -22,6 +22,7 @@ int		ft_atoi(const char *str);
 int		ft_isalpha(int ch);
 int		ft_isdigit(int ch);
 void	ft_putnbr(int n);
+size_t	ft_strlen(const char *str);		//--------------------- !!!
 
 /* errors */
 int		ft_catching_errors(int argc, char **argv);
@@ -68,7 +69,9 @@ int		ft_finding_max(t_elem **head);
 int		ft_search_elems_place(t_elem **head, int min);
 
 /* sorting */
-void	ft_prev_sort(int argc, char **argv);
+void	*ft_prev_sort(int argc, char **argv);
+
+void	ft_sorting(t_elem **datum_a, t_elem **datum_b, int *arr);
 
 void	ft_sorting_three_elems(t_elem **head);
 void	ft_sorting_five_elems(t_elem **datum_a, t_elem **datum_b);

@@ -16,7 +16,7 @@ int	ft_finding_min(t_elem **head)
 		tmp_head = tmp_head->next;
 		i++;
 	}
-	arr[i++] = tmp_head->value;
+	arr[i] = tmp_head->value;
 	i = 0;
 	while(i < ft_count_listsize(*head))
 	{
@@ -39,11 +39,11 @@ int	ft_finding_max(t_elem **head)
 	max = INT_MIN;
 	while (tmp_head->next)
 	{
-		arr[i] = tmp_head->value;
+		arr[i] = tmp_head->order;
 		tmp_head = tmp_head->next;
 		i++;
 	}
-	arr[i++] = tmp_head->value;
+	arr[i] = tmp_head->order;
 	i = 0;
 	while(i < ft_count_listsize(*head))
 	{

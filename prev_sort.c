@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   prev_sort.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/24 15:36:36 by gmckinle          #+#    #+#             */
+/*   Updated: 2021/09/24 15:36:38 by gmckinle         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "push_swap.h"
 
 static void	ft_swap(int	*a, int *b)
@@ -9,7 +22,7 @@ static void	ft_swap(int	*a, int *b)
 	*b = tmp;
 }
 
-void	ft_prev_sort(int argc, char **argv)
+void	*ft_prev_sort(int argc, char **argv)
 {
 	int		i;
 	int		*arr;
@@ -32,8 +45,10 @@ void	ft_prev_sort(int argc, char **argv)
 		}
 		i++;
 	}
-	i = 0;
-	while (i != argc - 1)
-		printf("%d ", arr[i++]);
-	printf("\n");
+	return (arr);
+	/* ----- end ----- */
+	// i = 0;
+	// while (i != argc - 1)
+	// 	printf("%d ", arr[i++]);
+	// printf("\n");
 }
