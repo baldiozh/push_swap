@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/27 16:47:29 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/27 20:40:32 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	print_result(t_elem *datum_a, t_elem *datum_b)  //don't need when proj is f
 
 void	ft_filling_stack(char **argv, t_elem **head)
 {
-	int		j;
+	int	j;
 
 	j = 1;	
 	*head = create(ft_atoi(argv[j++]));
@@ -50,11 +50,7 @@ int main(int argc, char **argv)
 	t_elem	*datum_a;
 	t_elem	*datum_b;
 	int		*arr;
-	int i;
-	int j;
 
-	i = 0;
-	j = 1;
 	if (argc == 1)
 	{
 		ft_putstr_fd("Error: too few arguments!\n", 1);
@@ -65,15 +61,19 @@ int main(int argc, char **argv)
 		ft_putstr_fd("Error: alphas, doubles or sorted!\n", 1);
 		exit(EXIT_FAILURE);
 	}
-	if (argc > 2)
-	{
-		ft_filling_stack(argv, &datum_a);
-	}
 	arr = ft_prev_sort(argc, argv);
-	// ft_sorting_five_elems(&datum_a, &datum_b, arr, argc);
-	ft_sorting(&datum_a, &datum_b, arr, argc);
+	if (argc > 2)
+		ft_filling_stack(argv, &datum_a);
+	if (argc == 3)
+		sa(&datum_a);
+	else if (argc == 4) //lобавь на 4 
+		ft_sorting_3(&datum_a);
+	else if (argc == 6)
+		ft_sorting_5(&datum_a, &datum_b, arr, argc);
+	else if (argc > 6 && argc < 102)
+		ft_sorting_100(&datum_a, &datum_b, arr, argc);
+	else if (argc > 101)
+		ft_sorting_500(&datum_a, &datum_b, arr, argc);
 	print_result(datum_a, datum_b);
-	// write(1, "\n\n", 2);
-	
 	return (0);
 }

@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void	ft_sorting_three_elems(t_elem **head)
+void	ft_sorting_3(t_elem **head)
 {
 	int	top;
 	int	mid;
