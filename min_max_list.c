@@ -27,29 +27,24 @@ int	ft_finding_min(t_elem **head)
 	return (min);
 }
 
-int	ft_finding_max(t_elem **head)
+int	ft_max(t_elem **head, int *arr) //order
 {
 	t_elem	*tmp_head;
-	int		arr[500];
 	int		i;
 	int		max;
 
 	i = 0;
 	tmp_head = *head;
 	max = INT_MIN;
-	while (tmp_head->next)
-	{
-		arr[i] = tmp_head->order;
-		tmp_head = tmp_head->next;
-		i++;
-	}
-	arr[i] = tmp_head->order;
+	ft_assign_order(head, arr);
 	i = 0;
 	while(i < ft_count_listsize(*head))
 	{
-		if(arr[i] > max)
-			max = arr[i];
+		if(tmp_head->order > max)
+			max = tmp_head->order;
+		tmp_head = tmp_head->next;
 		i++;
 	}
+	// printf("max = %d\n", max);
 	return (max);
 }

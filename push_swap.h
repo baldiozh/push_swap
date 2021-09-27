@@ -65,7 +65,7 @@ void	remove_last_elem(t_elem **head);
 int		ft_count_listsize(t_elem *head);
 
 int		ft_finding_min(t_elem **head);
-int		ft_finding_max(t_elem **head);
+int		ft_max(t_elem **head, int *arr);
 int		ft_search_elems_place(t_elem **head, int min);
 
 void	ft_assign_order(t_elem **head, int *arr);
