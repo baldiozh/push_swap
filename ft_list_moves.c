@@ -6,25 +6,23 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:30:19 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/16 18:09:26 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/27 18:30:20 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "push_swap.h"
 
-/* инициализация списка */
 t_elem *create(int value)
 {
 	t_elem *tmp;
 	
-	tmp = (t_elem *)malloc(sizeof(t_elem));			/* выделение памяти под корень списка */
-	tmp->value = value; 							/* присваивание значения узлу */
-	tmp->next = NULL;								/* присваивание указателю на след элем. знач. NULL */
-	return (tmp); 
+	tmp = (t_elem *)malloc(sizeof(t_elem));
+	tmp->value = value;
+	tmp->next = NULL;
+	return (tmp);
 }
 
-/* добавление узла в начало списка */
 t_elem *add_elem_start(int value, t_elem *head)
 {
 	t_elem *tmp;

@@ -19,10 +19,8 @@ typedef struct s_elem
 char	**ft_split(char const *s, char c);
 void	ft_putstr_fd(char *s, int fd);
 int		ft_atoi(const char *str);
-int		ft_isalpha(int ch);
 int		ft_isdigit(int ch);
 void	ft_putnbr(int n);
-size_t	ft_strlen(const char *str);		//--------------------- !!!
 
 /* errors */
 int		ft_catching_errors(int argc, char **argv);
@@ -78,7 +76,5 @@ void	ft_sorting(t_elem **datum_a, t_elem **datum_b, int *arr, int argc);
 void	ft_sorting_three_elems(t_elem **head);
 void	ft_sorting_five_elems(t_elem **datum_a, t_elem **datum_b, int *arr, int argc);
 void	ft_sorting_hundred(t_elem **datum_a, t_elem **datum_b);
-
-int	ft_finding_min_max(int *arr, int mode); /////
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 15:36:36 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/24 15:36:38 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/27 18:35:56 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ static void	ft_swap(int	*a, int *b)
 
 void	*ft_prev_sort(int argc, char **argv)
 {
-	int		i;
 	int		*arr;
+	int		i;
 	int		j;
 
 	i = 0;
@@ -46,9 +46,4 @@ void	*ft_prev_sort(int argc, char **argv)
 		i++;
 	}
 	return (arr);
-	/* ----- end ----- */
-	// i = 0;
-	// while (i != argc - 1)
-	// 	printf("%d ", arr[i++]);
-	// printf("\n");
 }

@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 16:58:04 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/23 14:44:48 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/27 18:31:45 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,6 @@ void	swap(t_elem **head)
 
 void	sa(t_elem **datum_a)
 {
-	// int	size;
-	// while ((*datum_a)->next)
-	// 	size++;
-	// if (size < 2)
-	// 	return ;
-	// else
 	swap(datum_a);
 	write(1, "sa\n", 3);
 }
