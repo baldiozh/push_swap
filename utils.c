@@ -9,7 +9,7 @@ void	ft_assign_order(t_elem **head, int *arr)
 	i = 0;
 	size = ft_count_listsize(*head);
 	tmp_head = *head;
-	while (tmp_head) // ПРИСВАИВАЕМ КАЖДОМУ ЭЛЕМЕНТУ СТЕКА СВОЙ ИНДЕКС исп-я отсорт-ый массив
+	while (tmp_head)
 	{
 		i = 0;
 		while(i < size)

@@ -6,11 +6,11 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/28 15:54:02 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 18:06:59 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap.h" //переполнение
 
 void	ft_filling_stack(char **argv, t_elem **head)
 {
@@ -55,5 +55,7 @@ int main(int argc, char **argv)
 	else if (argc > 101) /* 101-500-? */
 		ft_sorting_500(&datum_a, &datum_b, arr, argc);
 	print_list(datum_a, datum_b);
+	free_list(&datum_a);
+	free_list(&datum_b);
 	return (0);
 }

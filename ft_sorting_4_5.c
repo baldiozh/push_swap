@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 20:30:29 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/28 17:15:34 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 17:49:11 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ static void	ft_moves(t_elem **datum_a, t_elem **datum_b, int argc)
 	min = ft_finding_min(datum_a);
 	
 	i = ft_search_place(datum_a, min);
-	printf("min[%d] -- %d\n", i, min);
 	j = 1;
 	if ((i + 1) <= (argc / 2)) {
 		while (j++ < (i + 1))

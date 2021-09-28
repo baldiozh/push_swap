@@ -80,4 +80,6 @@ void	ft_sorting_4_5(t_elem **datum_a, t_elem **datum_b, int argc);
 void	ft_sorting_100(t_elem **datum_a, t_elem **datum_b, int *arr, int argc);
 void	ft_sorting_500(t_elem **datum_a, t_elem **datum_b, int *arr, int argc);
 
+void	free_list(t_elem **head);
+
 #endif
