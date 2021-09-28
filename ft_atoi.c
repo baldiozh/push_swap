@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:30:32 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/13 15:30:33 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 20:04:54 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ static int	ft_sign(const char *str, int sign, int i)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *str) //fix it
 {
 	int				i;
-	unsigned int	res;
+	unsigned long	res;
 	int				sign;
 
-	i = 0; 
+	i = 0;
 	res = 0;
 	sign = 1;
 	while (str[i] == '\t' || str[i] == '\r' || str[i] == '\n'
@@ -52,8 +52,8 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	if (res > INT_MAX && sign == 1)
-		return (-1);
+		return (INT_MAX + 1);
 	if (res > 2147483648 && sign == -1)
-		return (0);
+		return (INT_MIN - 1);
 	return (res * sign);
 }

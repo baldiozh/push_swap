@@ -12,12 +12,12 @@ void	ft_assign_order(t_elem **head, int *arr)
 	while (tmp_head)
 	{
 		i = 0;
-		while(i < size)
+		while (i < size)
 		{
-			if(tmp_head->value == arr[i])
+			if (tmp_head->value == arr[i])
 			{
 				tmp_head->order = i;
-				break;
+				break ;
 			}
 			i++;
 		}
@@ -36,9 +36,9 @@ int	ft_max(t_elem **head, int *arr)
 	max = INT_MIN;
 	ft_assign_order(head, arr);
 	i = 0;
-	while(i < ft_count_listsize(*head))
+	while (i < ft_count_listsize(*head))
 	{
-		if(tmp_head->order > max)
+		if (tmp_head->order > max)
 			max = tmp_head->order;
 		tmp_head = tmp_head->next;
 		i++;

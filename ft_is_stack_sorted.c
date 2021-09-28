@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 18:44:07 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/27 18:45:48 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 18:55:24 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_is_stack_sorted(t_elem **head)
 {
-	t_elem *tmp_head;
-	
+	t_elem	*tmp_head;
+
 	tmp_head = *head;
-	while(tmp_head->next)
+	while (tmp_head->next)
 	{
 		if (tmp_head->value > tmp_head->next->value)
 		{

@@ -6,10 +6,9 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 18:40:34 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/27 19:51:45 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 18:52:02 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -20,7 +19,7 @@ int	ft_search_elems_place(t_elem **head, int max)
 
 	i = 0;
 	tmp_head = *head;
-	while(tmp_head->next)
+	while (tmp_head->next)
 	{
 		if (tmp_head->order == max)
 			break ;
@@ -43,7 +42,7 @@ void	ft_sort_b(t_elem **datum_a, t_elem **datum_b, int argc, int *arr)
 		i = ft_search_elems_place(datum_b, max);
 		if ((*datum_b)->order == max)
 			pa(datum_a, datum_b);
-		else if(i <= arguments && (*datum_b)->order != max)
+		else if (i <= arguments && (*datum_b)->order != max)
 			rb(datum_b);
 		else if (i > arguments && (*datum_b)->order != max)
 			rrb(datum_b);
@@ -59,9 +58,9 @@ void	ft_sorting_100(t_elem **datum_a, t_elem **datum_b, int *arr, int argc)
 	i = 0;
 	size = ft_count_listsize(*datum_a);
 	ft_assign_order(datum_a, arr);
-	while(*datum_a)
+	while (*datum_a)
 	{
-		if((*datum_a)->order <= i && i > 1)
+		if ((*datum_a)->order <= i && i > 1)
 		{
 			pb(datum_a, datum_b);
 			rb(datum_b);
@@ -72,7 +71,7 @@ void	ft_sorting_100(t_elem **datum_a, t_elem **datum_b, int *arr, int argc)
 			pb(datum_a, datum_b);
 			i++;
 		}
-		else if((*datum_a)->order >= i)
+		else if ((*datum_a)->order >= i)
 			ra(datum_a);
 	}
 	ft_sort_b(datum_a, datum_b, argc, arr);
