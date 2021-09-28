@@ -6,10 +6,9 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 14:51:54 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/16 17:51:28 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 20:09:30 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -18,7 +17,7 @@ void	remove_last_elem(t_elem **head)
 	t_elem	*last;
 	t_elem	*tmp_head;
 	int		size;
-	
+
 	tmp_head = *head;
 	size = ft_count_listsize(*head);
 	while (size > 2)

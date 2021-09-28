@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:51 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/15 19:14:52 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 20:10:37 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	push(t_elem **src, t_elem **dest)
 {
-	t_elem *tmp;
+	t_elem	*tmp;
 
 	if (!(*src))
 		exit(EXIT_FAILURE);

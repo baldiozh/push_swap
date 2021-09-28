@@ -6,21 +6,20 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 14:52:01 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/27 18:33:32 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 20:09:57 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
 
-int		ft_count_listsize(t_elem *head)
+int	ft_count_listsize(t_elem *head)
 {
-	int size;
-	
-	size = 1; /* that's head */
-	while(head->next)
+	int	size;
+
+	size = 1;
+	while (head->next)
 	{
-		head = head->next;	
+		head = head->next;
 		size++;
 	}
 	return (size);

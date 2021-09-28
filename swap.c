@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 16:58:04 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/27 18:31:45 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 20:09:23 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	swap(t_elem **head)
 {
-	t_elem *first;
-	t_elem *second;
-	
+	t_elem	*first;
+	t_elem	*second;
+
 	first = *head;
 	second = (*head)->next;
 	first->next = (*head)->next->next;
