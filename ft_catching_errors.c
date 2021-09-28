@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:30:29 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/28 20:04:49 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 20:23:20 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ int	ft_check_if_overflow(char **argv) //fix atoi
 	int	i;
 
 	i = 1;
+	// сначала прогнать костыльный атои если он везде возвращает 1 то все ок
 	while (argv[i])
 	{
 		if (ft_atoi(argv[i]) > INT_MAX || ft_atoi(argv[i]) < INT_MIN)

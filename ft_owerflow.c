@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_owerflow.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 15:30:32 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/28 20:18:46 by gmckinle         ###   ########.fr       */
+/*   Created: 2021/09/28 20:18:12 by gmckinle          #+#    #+#             */
+/*   Updated: 2021/09/28 20:22:47 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	ft_sign(const char *str, int sign, int i)
 int	ft_atoi(const char *str)
 {
 	int				i;
-	unsigned int	res;
+	unsigned long	res;
 	int				sign;
 
 	i = 0;
@@ -55,5 +55,5 @@ int	ft_atoi(const char *str)
 		return (-1);
 	if (res > 2147483648 && sign == -1)
 		return (0);
-	return (res * sign);
+	return (1);
 }
