@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sorting_5.c                                     :+:      :+:    :+:   */
+/*   ft_sorting_4_5.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 20:30:29 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/27 20:45:24 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 14:28:21 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_finding_min(t_elem *head, int *arr) /* value */
+static int	ft_finding_min(t_elem **head)
 {
 	t_elem	*tmp_head;
 	int		min;
@@ -20,12 +20,12 @@ int	ft_finding_min(t_elem *head, int *arr) /* value */
 
 	i = 0;
 	min = INT_MAX;
-	// tmp_head = *head;
-	while(head)
+	tmp_head = *head;
+	while(tmp_head)
 	{
-		if(min > head->value)
-			min = head->value;
-		head = head->next;
+		if(min > tmp_head->value)
+			min = tmp_head->value;
+		tmp_head = tmp_head->next;
 	}
 	return (min);
 }
@@ -40,60 +40,55 @@ static int	ft_search_place(t_elem **head, int min)
 	while(tmp_head->next)
 	{
 		if (tmp_head->value == min)
+		{
+			i++;
 			break ;
+		}
 		tmp_head = tmp_head->next;
 		i++;
 	}
 	return (i);
 }
 
-static void	ft_move_baby(t_elem **head, int i, int argc)
+static void	ft_moves(t_elem **datum_a, t_elem **datum_b, int min, int i)
 {
-	if(i <= 3)
+	while (1)
 	{
-		while (i > 0)
+		if ((*datum_a)->value != min)
 		{
-			ra(head);
-			i--;
+			pb(datum_a, datum_b);
+			break ;
 		}
+		else if (i <= 2 && (*datum_a)->value != min)
+			while (i++ <= 2)
+				ra(datum_a);
+		else if (i >= 2 && (*datum_a)->value != min)	
+			while (i-- >= 2)
+				rra(datum_a);
 	}
-	else
-	{
-		while (i > 3)
-		{
-			rra(head);
-			i--;
-		}
-	}
+
 }
 
-void	ft_sorting_5(t_elem **datum_a, t_elem **datum_b, int *arr, int argc)
+void	ft_sorting_4_5(t_elem **datum_a, t_elem **datum_b, int argc)
 {
 	int		i;
 	int		j;
 	int		min;
-				//сортировка 4
-	j = 0;
+	
+	if (argc == 5)
+		j = 1;
+	else
+		j = 0;
 	while (j < 2)
 	{
-		min = ft_finding_min(*datum_a, arr);
-		printf("min = %d\n", min);
-		i = ft_search_elems_place(datum_a, min);
-		printf("i = %d\n", i);
-		ft_move_baby(datum_a, i, argc);
-		pb(datum_a, datum_b);
+		ft_moves(datum_a, datum_b, min, i);
 		j++;
-		write(1, "\n", 1);
-		ft_putstr_fd("A ", 1);
-		while((*datum_a)->next)
-		{
-			ft_putnbr((*datum_a)->value);
-			write(1, "-", 1);
-			*datum_a = (*datum_a)->next;
-		}
-	write(1, "\n", 1);
 	}
 	ft_sorting_3(datum_a);
-	while(j-- > 0)
+	if (argc == 5)
 		pa(datum_a, datum_b);
+	else 
+		while(j-- > 0)
+			pa(datum_a, datum_b);
+	ft_is_stack_sorted(datum_a); //-------------------------
 }

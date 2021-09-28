@@ -58,6 +58,9 @@ void	rrb(t_elem **datum_b);
 void	rrr(t_elem **datum_a, t_elem **datum_b);
 
 /* list utils */
+void	ft_is_stack_sorted(t_elem **head);
+void	print_list(t_elem *datum_a, t_elem *datum_b);
+
 int		ft_count_listsize(t_elem *head);
 int		ft_max(t_elem **head, int *arr);
 // int		ft_finding_min(t_elem **head, int *arr);
@@ -66,11 +69,12 @@ void	ft_assign_order(t_elem **head, int *arr);
 int		ft_search_elems_place(t_elem **head, int max);
 void	ft_sort_b(t_elem **datum_a, t_elem **datum_b, int argc, int *arr);
 
+
 /* sorting */
 void	*ft_prev_sort(int argc, char **argv);
 
 void	ft_sorting_3(t_elem **head);
-void	ft_sorting_5(t_elem **datum_a, t_elem **datum_b, int *arr, int argc);
+void	ft_sorting_4_5(t_elem **datum_a, t_elem **datum_b, int argc);
 
 void	ft_sorting_100(t_elem **datum_a, t_elem **datum_b, int *arr, int argc);
 void	ft_sorting_500(t_elem **datum_a, t_elem **datum_b, int *arr, int argc);

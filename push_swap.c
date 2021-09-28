@@ -6,31 +6,11 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/27 20:40:32 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 12:45:02 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	print_result(t_elem *datum_a, t_elem *datum_b)  //don't need when proj is finished
-{
-	write(1, "\n", 1);
-	ft_putstr_fd("A ", 1);
-	while(datum_a)
-	{
-		ft_putnbr(datum_a->value);
-		write(1, "-", 1);
-		datum_a = datum_a->next;
-	}
-	write(1, "\n", 1);
-	ft_putstr_fd("B ", 1);
-	while(datum_b)
-	{
-		ft_putnbr(datum_b->value);
-		write(1, "-", 1);
-		datum_b = datum_b->next;
-	}
-}
 
 void	ft_filling_stack(char **argv, t_elem **head)
 {
@@ -64,16 +44,16 @@ int main(int argc, char **argv)
 	arr = ft_prev_sort(argc, argv);
 	if (argc > 2)
 		ft_filling_stack(argv, &datum_a);
-	if (argc == 3)
+	if (argc == 3) /* 2 */
 		sa(&datum_a);
-	else if (argc == 4) //lобавь на 4 
+	else if (argc == 4) /* 3 */
 		ft_sorting_3(&datum_a);
-	else if (argc == 6)
-		ft_sorting_5(&datum_a, &datum_b, arr, argc);
-	else if (argc > 6 && argc < 102)
+	else if (argc == 5 || argc == 6) /* 4-5 */
+		ft_sorting_4_5(&datum_a, &datum_b, argc);
+	else if (argc > 6 && argc < 102) /* 5-101 */
 		ft_sorting_100(&datum_a, &datum_b, arr, argc);
-	else if (argc > 101)
+	else if (argc > 101) /* 101-500-? */
 		ft_sorting_500(&datum_a, &datum_b, arr, argc);
-	print_result(datum_a, datum_b);
+	print_list(datum_a, datum_b);
 	return (0);
 }
