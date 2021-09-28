@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 20:30:29 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/28 14:28:21 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/28 17:15:34 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,33 +40,32 @@ static int	ft_search_place(t_elem **head, int min)
 	while(tmp_head->next)
 	{
 		if (tmp_head->value == min)
-		{
-			i++;
 			break ;
-		}
 		tmp_head = tmp_head->next;
 		i++;
 	}
 	return (i);
 }
 
-static void	ft_moves(t_elem **datum_a, t_elem **datum_b, int min, int i)
+static void	ft_moves(t_elem **datum_a, t_elem **datum_b, int argc)
 {
-	while (1)
-	{
-		if ((*datum_a)->value != min)
-		{
-			pb(datum_a, datum_b);
-			break ;
-		}
-		else if (i <= 2 && (*datum_a)->value != min)
-			while (i++ <= 2)
-				ra(datum_a);
-		else if (i >= 2 && (*datum_a)->value != min)	
-			while (i-- >= 2)
-				rra(datum_a);
+	int	i;
+	int	min;
+	int	j;
+	
+	min = ft_finding_min(datum_a);
+	
+	i = ft_search_place(datum_a, min);
+	printf("min[%d] -- %d\n", i, min);
+	j = 1;
+	if ((i + 1) <= (argc / 2)) {
+		while (j++ < (i + 1))
+			ra(datum_a);
+	} else {
+		while (j++ <= (argc - i - 1))
+			rra(datum_a);
 	}
-
+	pb(datum_a, datum_b);
 }
 
 void	ft_sorting_4_5(t_elem **datum_a, t_elem **datum_b, int argc)
@@ -75,20 +74,12 @@ void	ft_sorting_4_5(t_elem **datum_a, t_elem **datum_b, int argc)
 	int		j;
 	int		min;
 	
-	if (argc == 5)
-		j = 1;
-	else
-		j = 0;
-	while (j < 2)
-	{
-		ft_moves(datum_a, datum_b, min, i);
-		j++;
-	}
+	j = argc;
+	while (argc != 4)
+		ft_moves(datum_a, datum_b, argc--);
 	ft_sorting_3(datum_a);
-	if (argc == 5)
+	pa(datum_a, datum_b);
+	if (j == 6)
 		pa(datum_a, datum_b);
-	else 
-		while(j-- > 0)
-			pa(datum_a, datum_b);
 	ft_is_stack_sorted(datum_a); //-------------------------
 }

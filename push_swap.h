@@ -11,6 +11,7 @@
 typedef struct s_elem
 {
 	int	value;
+	int order1;
 	int	order;
 	struct s_elem *next;
 }	t_elem;
