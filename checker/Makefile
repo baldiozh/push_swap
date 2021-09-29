@@ -5,7 +5,8 @@ SRC		= checker.c \
 		ft_catching_errors.c ft_list_moves.c ft_owerflow.c \
 		push.c swap.c rotate.c reverse_rotate.c \
 		ft_count_listsize.c print_list.c remove_last_elem.c \
-		
+		gnl_utils.c get_next_line.c \
+		ft_strncmp.c utils.c ft_is_stack_sorted.c
 
 OBJ		=	${SRC:.c=.o}
 FLAGS	=	-Wall -Werror -Wextra 

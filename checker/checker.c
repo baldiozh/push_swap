@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 17:11:00 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 18:44:59 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,19 @@ void	ft_filling_stack(char **argv, t_elem **head)
 	}	
 }
 
-void	reading(int argc, char **argv)
+void	reading(t_elem **datum_a, t_elem **datum_b)
 {
 	char	*line;
 	
-	while(get_next_line(0, &line) > 0)
+	while(get_next_line(0, &line) != 0)
 	{
-		if (compare(&line) == 1)
-			ft_putstr_fd("Error\n", 1);
+		if (compare(line) == 1)
+			ft_putstr_fd("!!!!!\n", 1);
 		else
-		{
-			just_do_it()
-		}
+			just_do_it(&line, datum_a, datum_b);
+		free(line);
 	}
+	free(line);
 }
 
 void	freeList(t_elem **head)
@@ -70,8 +70,8 @@ int	main(int argc, char **argv)
 	errors(argc, argv);
 	if (argc > 2)
 		ft_filling_stack(argv, &datum_a);
-	
-	print_list(datum_a, datum_b);
+	reading(&datum_a, &datum_b);
+	ft_is_stack_sorted(&datum_a);
 	freeList(&datum_a);
 	return (0);
 }

@@ -10,6 +10,7 @@
 # include <limits.h>
 # include <stdlib.h>
 
+#include	<stdio.h> ////////!!!!!
 
 typedef struct s_elem
 {
@@ -79,7 +80,8 @@ int		ft_count_listsize(t_elem *head);
 int		ft_max(t_elem **head, int *arr);
 
 /* utils */
-int		compare(char **line);
+int		compare(char *line);
+void	just_do_it(char **line, t_elem **datum_a, t_elem **datum_b);
 
 
 

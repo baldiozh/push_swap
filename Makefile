@@ -13,8 +13,10 @@ HEADER	=	push_swap.h
 
 all:		$(NAME)
 
+
 $(NAME):	$(OBJ) $(HEADER)
-			gcc $(FLAGS) $(OBJ) -o $(NAME);
+			gcc $(FLAGS) $(OBJ) -o $(NAME)
+			rm -rf ${OBJ}
 clean:
 			rm -rf ${OBJ}
 
