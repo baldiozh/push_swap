@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 12:45:53 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 13:07:51 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	main(int argc, char **argv)
 	t_elem	*datum_b;
 	int		*arr;
 
+	datum_b = NULL;
 	errors(argc, argv);
 	arr = ft_prev_sort(argc, argv);
 	if (argc > 2)
@@ -63,9 +64,9 @@ int	main(int argc, char **argv)
 	else if (argc == 5 || argc == 6)
 		ft_sorting_4_5(&datum_a, &datum_b, argc);
 	else if (argc > 6 && argc < 102)
-		ft_sorting_100(&datum_a, &datum_b, arr, argc);
+		ft_sorting_100(&datum_a, &datum_b, arr);
 	else if (argc > 101)
-		ft_sorting_500(&datum_a, &datum_b, arr, argc);
+		ft_sorting_500(&datum_a, &datum_b, arr);
 	print_list(datum_a, datum_b);
 	freeList(&datum_a);
 	free(arr);

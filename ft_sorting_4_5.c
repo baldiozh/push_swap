@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 20:30:29 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/28 18:53:28 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 13:00:42 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,7 @@ static void	ft_moves(t_elem **datum_a, t_elem **datum_b, int argc)
 
 void	ft_sorting_4_5(t_elem **datum_a, t_elem **datum_b, int argc)
 {
-	int		i;
 	int		j;
-	int		min;
 
 	j = argc;
 	while (argc != 4)

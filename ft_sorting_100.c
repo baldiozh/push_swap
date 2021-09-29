@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 18:40:34 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/28 18:52:02 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 12:58:44 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_search_elems_place(t_elem **head, int max)
 	return (i);
 }
 
-void	ft_sort_b(t_elem **datum_a, t_elem **datum_b, int argc, int *arr)
+void	ft_sort_b(t_elem **datum_a, t_elem **datum_b, int *arr)
 {
 	int	i;
 	int	max;
@@ -49,9 +49,8 @@ void	ft_sort_b(t_elem **datum_a, t_elem **datum_b, int argc, int *arr)
 	}
 }
 
-void	ft_sorting_100(t_elem **datum_a, t_elem **datum_b, int *arr, int argc)
+void	ft_sorting_100(t_elem **datum_a, t_elem **datum_b, int *arr)
 {
-	t_elem	*tmp_head;
 	int		i;
 	int		size;
 
@@ -74,5 +73,5 @@ void	ft_sorting_100(t_elem **datum_a, t_elem **datum_b, int *arr, int argc)
 		else if ((*datum_a)->order >= i)
 			ra(datum_a);
 	}
-	ft_sort_b(datum_a, datum_b, argc, arr);
+	ft_sort_b(datum_a, datum_b, arr);
 }
