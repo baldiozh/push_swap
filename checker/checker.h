@@ -10,8 +10,6 @@
 # include <limits.h>
 # include <stdlib.h>
 
-#include	<stdio.h> ////////!!!!!
-
 typedef struct s_elem
 {
 	int				value;
@@ -23,10 +21,10 @@ typedef struct s_elem
 int		get_next_line(int fd, char **line);
 
 /* libft */
-char	*ft_strdup(char *src);
 size_t	ft_strlen(const char *str);
 char	*ft_join(char const *s1, char const *s2);
 char	*ft_strchr(char *str, int ch);
+char	*ft_strdup(char *src);
 
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 void	ft_putstr_fd(char *s, int fd);
@@ -82,8 +80,6 @@ int		ft_max(t_elem **head, int *arr);
 /* utils */
 int		compare(char *line);
 void	just_do_it(char **line, t_elem **datum_a, t_elem **datum_b);
-
-
 
 void	freeList(t_elem **head);
 
