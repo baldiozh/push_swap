@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 19:13:53 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 19:17:34 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 19:41:25 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,7 @@ void	rrb(t_elem **datum_b);
 void	rrr(t_elem **datum_a, t_elem **datum_b);
 
 /* list utils */
-void	ft_is_stack_sorted(t_elem **head);
-
+void	ft_is_stack_sorted(t_elem **datum_a, t_elem **datum_b);
 int		ft_count_listsize(t_elem *head);
 
 /* utils */

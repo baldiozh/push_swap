@@ -6,25 +6,11 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 19:16:00 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 19:41:31 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-
-static void	errors(int argc, char **argv)
-{
-	if (argc == 1)
-	{
-		ft_putstr_fd("Error\n", 1);
-		exit(EXIT_FAILURE);
-	}
-	if (ft_catching_errors(argc, argv) == 1)
-	{
-		ft_putstr_fd("Error\n", 1);
-		exit(EXIT_FAILURE);
-	}
-}
 
 void	ft_filling_stack(char **argv, t_elem **head)
 {
@@ -67,11 +53,15 @@ int	main(int argc, char **argv)
 	t_elem	*datum_b;
 
 	datum_b = NULL;
-	errors(argc, argv);
+	if (argc < 3 || ft_catching_errors(argc, argv) == 1)
+	{
+		ft_putstr_fd("Error\n", 1);
+		exit(EXIT_FAILURE);
+	}
 	if (argc > 2)
 		ft_filling_stack(argv, &datum_a);
 	reading(&datum_a, &datum_b);
-	ft_is_stack_sorted(&datum_a);
+	ft_is_stack_sorted(&datum_a, &datum_b);
 	freeList(&datum_a);
 	return (0);
 }
