@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 15:46:20 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 17:11:00 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,14 @@ void	reading(int argc, char **argv)
 {
 	char	*line;
 	
-	while(get_next_line(0, &line))
+	while(get_next_line(0, &line) > 0)
 	{
-		
+		if (compare(&line) == 1)
+			ft_putstr_fd("Error\n", 1);
+		else
+		{
+			just_do_it()
+		}
 	}
 }
 
