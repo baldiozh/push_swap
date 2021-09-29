@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 20:18:12 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/28 20:22:47 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 12:46:14 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_sign(const char *str, int sign, int i)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+int	ft_owerflow(const char *str)
 {
 	int				i;
 	unsigned long	res;

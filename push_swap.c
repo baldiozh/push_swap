@@ -6,11 +6,11 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/28 19:43:35 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 12:45:53 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h" 		//переполнение инта ))))!!
+#include "push_swap.h"
 
 void	errors(int argc, char **argv)
 {
@@ -21,7 +21,7 @@ void	errors(int argc, char **argv)
 	}
 	if (ft_catching_errors(argc, argv) == 1)
 	{
-		ft_putstr_fd("Error: alphas, doubles or sorted!\n", 1);
+		ft_putstr_fd("Error: alphas, doubles, owerflow or sorted!\n", 1);
 		exit(EXIT_FAILURE);
 	}
 }

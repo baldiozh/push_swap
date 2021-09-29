@@ -26,6 +26,7 @@ int		ft_checking_if_doubles(char **argv);
 int		ft_checking_if_digits(char **argv);
 int		ft_checking_if_sorted(char **argv);
 int		ft_check_if_overflow(char **argv);
+int		ft_owerflow(const char *str);
 
 /* list utils */
 t_elem	*create(int value);
