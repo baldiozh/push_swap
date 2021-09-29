@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 18:44:59 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 19:16:00 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ void	ft_filling_stack(char **argv, t_elem **head)
 void	reading(t_elem **datum_a, t_elem **datum_b)
 {
 	char	*line;
-	
-	while(get_next_line(0, &line) != 0)
+
+	while (get_next_line(0, &line) != 0)
 	{
 		if (compare(line) == 1)
-			ft_putstr_fd("!!!!!\n", 1);
+			ft_putstr_fd("Error\n", 1);
 		else
 			just_do_it(&line, datum_a, datum_b);
 		free(line);

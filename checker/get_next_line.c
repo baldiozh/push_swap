@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 15:17:35 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 18:43:25 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 19:15:37 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,11 @@ static void	ft_rewrite_remainder(char **remainder, char *buf)
 int	get_next_line(int fd, char **line)
 {
 	ssize_t			bytes;
-	char			buf[BUFFER_SIZE + 1]; 
+	char			buf[BUFFER_SIZE + 1];
 	int				ret_ft;
 	static char		*remainder;
 
-	if (read(fd, NULL, 0) == -1 || BUFFER_SIZE < 1 || line == NULL) 
+	if (read(fd, NULL, 0) == -1 || BUFFER_SIZE < 1 || line == NULL)
 		return (-1);
 	while (1)
 	{

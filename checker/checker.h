@@ -1,5 +1,17 @@
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/29 19:13:53 by gmckinle          #+#    #+#             */
+/*   Updated: 2021/09/29 19:17:34 by gmckinle         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef CHECKER_H
+# define CHECKER_H
 
 # ifndef	BUFFER_SIZE
 #  define	BUFFER_SIZE	4026
@@ -72,10 +84,8 @@ void	rrr(t_elem **datum_a, t_elem **datum_b);
 
 /* list utils */
 void	ft_is_stack_sorted(t_elem **head);
-void	print_list(t_elem *datum_a, t_elem *datum_b);
 
 int		ft_count_listsize(t_elem *head);
-int		ft_max(t_elem **head, int *arr);
 
 /* utils */
 int		compare(char *line);

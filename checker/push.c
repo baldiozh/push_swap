@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:51 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 13:37:59 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 19:19:32 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,9 @@ void	push(t_elem **src, t_elem **dest)
 void	pa(t_elem **datum_a, t_elem **datum_b)
 {
 	push(datum_b, datum_a);
-	write(1, "pa\n", 3);
 }
 
 void	pb(t_elem **datum_a, t_elem **datum_b)
 {
 	push(datum_a, datum_b);
-	write(1, "pb\n", 3);
 }

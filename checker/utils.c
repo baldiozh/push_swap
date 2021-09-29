@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 15:46:40 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 18:42:35 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 19:17:50 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ int	compare(char *line)
 
 void	just_do_it(char **line, t_elem **datum_a, t_elem **datum_b)
 {
-	printf("%s\n", *line);
 	if (ft_strncmp(*line, "sa", 3) == 0)
 		sa(datum_a);
 	else if (ft_strncmp(*line, "sb", 3) == 0)

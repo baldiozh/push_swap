@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 16:58:18 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 13:38:39 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/09/29 19:19:40 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,15 @@ void	reverse_rotate(t_elem **head)
 void	rra(t_elem **datum_a)
 {
 	reverse_rotate(datum_a);
-	write(1, "rra\n", 4);
 }
 
 void	rrb(t_elem **datum_b)
 {
 	reverse_rotate(datum_b);
-	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_elem **datum_a, t_elem **datum_b)
 {
 	reverse_rotate(datum_a);
 	reverse_rotate(datum_b);
-	write(1, "rrr\n", 4);
 }
