@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 19:09:00 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 19:09:01 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/10/05 16:56:42 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int		ft_checking_if_doubles(char **argv);
 int		ft_checking_if_digits(char **argv);
 int		ft_checking_if_sorted(char **argv);
 int		ft_check_if_overflow(char **argv);
-int		ft_owerflow(const char *str);
+int		ft_overflow(const char *str);
 
 /* list utils */
 t_elem	*create(int value);

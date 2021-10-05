@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 16:58:18 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 19:19:40 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/10/05 17:00:36 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	reverse_rotate(t_elem **head)
 	t_elem	*tmp;
 	t_elem	*tmp_head;
 
+	if (!(*head))
+		exit (EXIT_FAILURE);
 	tmp = *head;
 	tmp_head = *head;
 	while (tmp_head->next)

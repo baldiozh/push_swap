@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_owerflow.c                                      :+:      :+:    :+:   */
+/*   ft_overflow.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 20:18:12 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 13:38:51 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/10/05 16:55:21 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_sign(const char *str, int sign, int i)
 	return (0);
 }
 
-int	ft_owerflow(const char *str)
+int	ft_overflow(const char *str)
 {
 	int				i;
 	unsigned long	res;

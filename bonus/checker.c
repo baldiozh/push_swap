@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 19:41:31 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/10/05 17:10:57 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,9 @@ int	main(int argc, char **argv)
 	t_elem	*datum_b;
 
 	datum_b = NULL;
-	if (argc < 3 || ft_catching_errors(argc, argv) == 1)
+	if (argc < 3 || ft_checking_if_sorted(argv) == 1)
+		exit(EXIT_FAILURE);
+	if (ft_catching_errors(argc, argv) == 1)
 	{
 		ft_putstr_fd("Error\n", 1);
 		exit(EXIT_FAILURE);

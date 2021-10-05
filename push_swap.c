@@ -6,7 +6,7 @@
 /*   By: gmckinle <gmckinle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:29:33 by gmckinle          #+#    #+#             */
-/*   Updated: 2021/09/29 13:07:51 by gmckinle         ###   ########.fr       */
+/*   Updated: 2021/10/05 16:54:39 by gmckinle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	errors(int argc, char **argv)
 {
-	if (argc == 1)
+	if (argc < 3 || ft_checking_if_sorted(argv) == 1)
 	{
-		ft_putstr_fd("Error: too few arguments!\n", 1);
 		exit(EXIT_FAILURE);
 	}
 	if (ft_catching_errors(argc, argv) == 1)
 	{
-		ft_putstr_fd("Error: alphas, doubles, owerflow or sorted!\n", 1);
+		ft_putstr_fd("Error\n", 1);
 		exit(EXIT_FAILURE);
 	}
 }
